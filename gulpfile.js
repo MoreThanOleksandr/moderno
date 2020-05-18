@@ -15,7 +15,7 @@ gulp.task('scss', function(){
     return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
-        browsers: ['last 8 versions']
+        overrideBrowserslist: ['last 8 versions']
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'))
@@ -55,7 +55,7 @@ gulp.task('js',function(){
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "app"
+            baseDir: "app/"
         }
     });
 });
