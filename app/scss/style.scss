@@ -278,19 +278,19 @@
     max-width: 370px;
     text-align: center;
     padding: 0 15px;
-    
-    &:hover{
-        .advantages__item-image{
+
+    &:hover {
+        .advantages__item-image {
             background-color: $green;
-            svg{
+            svg {
                 color: #ffffff;
             }
         }
-        .advantages__item-title{
+        .advantages__item-title {
             color: $green;
         }
     }
-    &-image{
+    &-image {
         width: 114px;
         height: 114px;
         background-color: #fff;
@@ -299,10 +299,10 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto 30px;
-        transition: all .3s;
-        svg{
+        transition: all 0.3s;
+        svg {
             color: #000000;
-            transition: all .3s;
+            transition: all 0.3s;
         }
     }
     &-title {
@@ -310,7 +310,7 @@
         color: #fff;
         @include f500;
         margin-bottom: 25px;
-        transition: all .3s;
+        transition: all 0.3s;
     }
     &-text {
         font-size: 15px;
@@ -319,7 +319,7 @@
 
 ////// START AUTHORS
 
-.authors{
+.authors {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -327,7 +327,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &__box{
+    &__box {
         max-width: 650px;
         width: 100%;
         min-height: 215px;
@@ -336,17 +336,17 @@
         justify-content: center;
         background-color: $green;
     }
-    &__title{
+    &__title {
         font-size: 30px;
         line-height: 36px;
         color: #fff;
         margin-right: 45px;
         max-width: 261px;
-        span{
+        span {
             @include f500;
         }
     }
-    &__link{
+    &__link {
         font-size: 18px;
         line-height: 36px;
         padding: 14px 40px;
@@ -356,25 +356,25 @@
 
 /////// START TOTURIALS
 
-.tutorials{
+.tutorials {
     padding: 70px 0 120px;
-    &__inner{
+    &__inner {
         display: flex;
         justify-content: space-between;
     }
-    &__item{
+    &__item {
         max-width: 370px;
         width: 100%;
     }
 }
-.tutorials__item{
-    &-image{
+.tutorials__item {
+    &-image {
         min-height: 270px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
-    &-title{
+    &-title {
         background-color: #f8f8f8;
         font-size: 24px;
         text-align: center;
@@ -383,4 +383,158 @@
         color: $bg;
     }
 }
+
+/////// STAR FOOTER
+
+.footer {
+    background-color: $bg;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0 80px;
+    }
+    &__col {
+        max-width: 270px;
+        &-menu {
+            min-width: 220px;
+        }
+        &-title {
+            font-size: 22px;
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+            color: #fff;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 2px;
+                width: 51px;
+                height: 3px;
+                background-color: $green;
+            }
+        }
+        &-text {
+            color: #b7c3c8;
+            margin-bottom: 30px;
+        }
+    }
+    &__info {
+        color: #fff;
+        @include f500;
+        padding-left: 30px;
+        margin-top: 18px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "\f041";
+            font-family: "icomoon";
+            color: $green;
+            font-size: 18px;
+            left: 0;
+        }
+        &-phone{
+            &::before{
+            content: "\f095";
+            }
+        }
+    }
+}
+.footer__copy {
+    border-top: 1px solid #919699;
+    &-text {
+        font-size: 15px;
+        color: #919699;
+        text-align: center;
+        padding: 25px 0;
+    }
+}
+
+.footer__col-list {
+    a{
+        margin-bottom: 13px;
+        color: #b7c3c8;
+        padding-left: 22px;
+        position: relative;
+        &::before{
+            content: '\f105';
+            font-family: "icomoon";
+            position: absolute;
+            left: 0;
+            color: $green;
+            font-size: 18px;
+        }
+    }
+}
+.footer__social-links{
+    margin-bottom: 33px;
+    li{
+        display: inline-block;
+        &+li{
+            margin-left: 7px;
+        }
+    }
+    a{
+        width: 28px;
+        height: 28px;
+        background-image: url(../images/socials.png);
+        
+    }
+}
+.link-twitter{
+    background-position: -28px 0;
+}
+.link-youtube{
+    background-position: 0 -28px;
+}
+.link-pinterest{
+    background-position: -28px -28px;
+}
+.link-linkedin{
+    background-position: -56px 0;
+}
+.footer__form{
+    position: relative;
+    &-title{
+        margin-bottom: 15px;
+        color: #fff;
+        font-size: 20px;
+    }
+    input{
+        border: none;
+        background-color: #2f3c43;
+        display: block;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        font-size: 14px;
+        padding-left: 13px;
+        padding-right: 50px;
+        &::placeholder{
+            color: #697378;
+        }
+    }
+    button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $green;
+        border: none;
+        height: 40px;
+        width: 43px;
+        cursor: pointer;
+        &::before{
+            content: '\f124';
+            position: absolute;
+            font-family: 'icomoon';
+            font-size: 20px;
+            top: 11px;
+            left: 12px;
+            color: #ffffff;
+        }
+    }
+}
+
 @import "media";
