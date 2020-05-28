@@ -4,6 +4,9 @@
 @import "glob";
 /////START HEADER
 
+.header{
+    background-color: #fff;
+}
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -107,12 +110,12 @@
     }
 }
 .basket {
+    margin-right: 20px;
     span {
         background-color: $green;
     }
 }
 .user {
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -172,15 +175,16 @@
         font-size: 12px;
         margin-bottom: 15px;
     }
+    z-index: 2;
 }
 .circle__menu{
     position: absolute;
     top: 62px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 0px solid #e0e0e0;
     right: 0;
     height: 0;
     overflow: hidden;
-    transition: all .5s;    
+    z-index: 2;
 }
 .user__box,
 .basket__box,
@@ -210,6 +214,8 @@
         .circle__menu{
             overflow: visible;
             height: auto;
+            border-top: 1px solid #e0e0e0;
+            transition: all .5s;
         }
         .circle__item{
             padding: 23px 23px;
@@ -218,6 +224,7 @@
     }
 }
 .circle__item{
+    transition: all .5s;
     background-color: #fff;
     padding: 0 23px;
     border: 0px solid #e0e0e0;
@@ -225,7 +232,6 @@
     display: flex;
     align-items: center;
     width: 271px;
-    transition: all .5s;
 }
 .circle__images{
     margin-right: 15px;
@@ -305,7 +311,10 @@
     color: $orange;
 }
 }
-
+.header__btn-menu,
+.menu__btn{
+    display: none;
+}
 
 //////// START SEARCH
 
@@ -1144,4 +1153,7 @@ button.icon-sort-amount-desc {
         }
     }
 }
+
+
+
 @import "media";
