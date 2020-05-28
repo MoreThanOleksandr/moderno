@@ -20,7 +20,8 @@ body{
 .content{
     flex: 1 0 auto;
 }
-.new-items__content{
+.new-items__content,
+.product-detail__content{
     background-color: $grey;
 }
 footer{
