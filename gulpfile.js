@@ -22,6 +22,8 @@ gulp.task('scss', function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
+
+
 gulp.task('css',function(){
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
@@ -41,18 +43,12 @@ gulp.task('html',function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('script',function(){
-    return gulp.src('app/js/*.js')
-    .pipe(browserSync.reload({stream:true}))
-});
-
 gulp.task('js',function(){
     return gulp.src([
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/mixitup/dist/mixitup.js',        
         'node_modules/rateyo/src/jquery.rateyo.js',     
         'node_modules/ion-rangeslider/js/ion.rangeSlider.js',        
-        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.js'        
     ])
     .pipe(concat('libs.min.js'))
@@ -60,6 +56,13 @@ gulp.task('js',function(){
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({stream: true}))
 });
+
+gulp.task('script',function(){
+    return gulp.src('app/js/*.js')
+    .pipe(browserSync.reload({stream:true}))
+});
+
+
 
 gulp.task('browser-sync', function() {
     browserSync.init({

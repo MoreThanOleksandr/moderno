@@ -1508,6 +1508,7 @@ button.icon-sort-amount-desc {
     margin-bottom: 30px;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
+    font-size: 30px;
 }
 .page-404__text {
     max-width: 501px;
@@ -1726,13 +1727,36 @@ button.icon-sort-amount-desc {
         color: #000;
         border: 1px solid #dcdcdc;
     }
-    select {
-        min-width: 540px;
+    .jq-selectbox {
         width: 100%;
+    }
+    .jq-selectbox__select {
         height: 40px;
-        background-color: #f9f9f9;
+        padding: 0px 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: "Roboto-Regular", sans-serif;
+        line-height: 40px;
         color: #707070;
-        border: 1px solid #dcdcdc;
+        text-shadow: none;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        font-size: 15px;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        top: 0;
+        &::before {
+            font-family: "icomoon";
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
     }
 }
 
