@@ -423,7 +423,7 @@
     flex-basis: calc(25% - 30px);
     margin-left: 30px;
 }
-.product__item {   
+.product__item {
     max-width: 442px;
     width: 100%;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
@@ -2217,4 +2217,115 @@ button.icon-sort-amount-desc {
         color: $green;
     }
 }
+
+//      modal
+
+#modal {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    /* This is scale ratio */
+    padding-top: 56.25%;
+}
+/* This adds max-width to popup content */
+.custom-popup-class .mfp-content {
+    width: 100%;
+    max-width: 730px;
+}
+#modal .mfp-close {
+    color: #fff;
+    right: 7px;
+}
+
+.login__inner {
+    width: 100%;
+    background: $green;
+    position: absolute;
+    top: -3px;
+    padding: 100px 0;
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    label {
+        position: relative;
+        display: block;
+        width: 100%;
+        &::before {
+            position: absolute;
+            font-family: "icomoon";
+            font-size: 14px;
+            color: #fff;
+            left: 18px;
+            top: 9px;
+        }
+    }
+    .login__label-name::before {
+        content: "\f007";
+    }
+    .login__label-pass::before {
+        content: "\f023";
+    }
+    input {
+        height: 43px;
+        margin-bottom: 8px;
+        border: none;
+        background-color: #76ae36;
+        color: #fff;
+        width: 100%;
+        font-size: 14px;
+        padding-left: 40px;
+        display: block;
+        &::placeholder {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    button {
+        margin-top: 19px;
+        padding: 18px 0 16px;
+        background-color: #fff;
+        width: 140px;
+        border: none;
+        margin-right: 10px;
+        text-transform: uppercase;
+        @include f700;
+        color: #000;
+        text-align: center;
+        box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+    }
+}
+.lost-pass{
+    display: block;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+.create-acc{
+    margin-top: 19px;
+    padding: 15px 0 15px 28px;
+    text-align: center;
+    width: 245px;
+    color: #fff;
+    background-color: #76ae36;
+    font-size: 18px;
+    position: relative;
+    &::before{
+        content: '\f044';
+        font-family: "icomoon";
+        position: absolute;
+        color: #fff;
+        left: 35px;
+        top: 15px;
+    }
+}
+.login__inner-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    @include f700;
+}
+
 @import "media";

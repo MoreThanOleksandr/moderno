@@ -26,6 +26,7 @@ gulp.task('scss', function(){
 
 gulp.task('css',function(){
     return gulp.src([
+        'node_modules/magnific-popup/dist/magnific-popup.css',
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/rateyo/src/jquery.rateyo.css',
@@ -45,6 +46,7 @@ gulp.task('html',function(){
 
 gulp.task('js',function(){
     return gulp.src([
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',   
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/mixitup/dist/mixitup.js',        
         'node_modules/rateyo/src/jquery.rateyo.js',     

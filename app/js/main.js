@@ -1,6 +1,12 @@
 $(function () {
 
 
+    $('.header__btn-login').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        mainClass: 'custom-popup-class'
+    });
+
 
     $('.rate__star').rateYo({
         rating: 5,

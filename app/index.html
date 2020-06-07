@@ -152,8 +152,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <a data-fancybox data-src="#modal" href="javascript:;"
-                                    class="header__btn header__btn-login header__btn-login--on">Login</a>
+                                <a href="#modal" class="header__btn header__btn-login header__btn-login--on">Login</a>
                                 <a class="header__btn header__btn-register header__btn-login--on" href="#">Register</a>
                                 <a class="header__btn header__btn-logout header__btn-login--off" href="#">Logout</a>
                             </div>
@@ -1117,8 +1116,21 @@
         </footer>
     </div>
 
-    <div id="modal">
-        12345
+    <div id="modal" class="mfp-hide">
+        <div class="login__inner">
+            <div class="login__inner-title">Login</div>
+            <form>
+                <label class="login__label-name">
+                    <input type="text" placeholder="Name" required>
+                </label>
+                <label class="login__label-pass">
+                    <input type="password" placeholder="Password" required>
+                </label>
+                <button type="submit">submit</button>
+                <a class="create-acc" href="#">Creat An Account?</a>
+                <a class="lost-pass" href="#">Lost Password?</a>
+            </form>
+        </div>
     </div>
 
 
